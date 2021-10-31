@@ -1,0 +1,90 @@
+<div class="properties" [formGroup]="fbProperties">
+  <h3>Propiedades</h3>
+
+  <button
+    type="button"
+    class="btn btn-primary action_btn"
+    style="margin-bottom: 15px"
+    (click)="undo()"
+    [disabled]="historyPosition < 1"
+  >
+    <i class="bi bi-arrow-counterclockwise"></i>
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-primary action_btn"
+    style="margin-bottom: 15px"
+    (click)="redo()"
+    [disabled]="historyPosition + 1 == history.length"
+  >
+    <i class="bi bi-arrow-clockwise"></i>
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-primary"
+    style="margin-bottom: 15px"
+    (click)="addProperty()"
+  >
+    Agregar propiedad
+  </button>
+  <div formArrayName="properties">
+    <div *ngFor="let property of propertiesArr.controls; let i = index">
+      <div [formGroupName]="i" class="row">
+        <div class="col-3">
+          <select
+            class="form-select"
+            aria-label="Propiedad"
+            formControlName="property"
+            (change)="changeInput($event.target['selectedIndex'], i)"
+          >
+            <option *ngFor="let option of properties" [value]="option.value">
+              {{ option.title }}
+            </option>
+          </select>
+        </div>
+
+        <div class="col">
+          <input
+            *ngIf="
+              propertiesControl[i] && propertiesControl[i]['type'] == 'input'
+            "
+            class="form-control"
+            [placeholder]="
+              propertiesControl[i]
+                ? propertiesControl[i].placeholder
+                : 'Escoga una propiedad'
+            "
+            formControlName="value"
+            (keyup)="updateURL()"
+          />
+          <select
+            *ngIf="
+              propertiesControl[i] && propertiesControl[i]['type'] == 'select'
+            "
+            class="form-select"
+            formControlName="value"
+            (change)="updateURL()"
+          >
+            <option value="" disabled selected>
+              {{ propertiesControl[i]["placeholder"] }}
+            </option>
+            <option *ngFor="let option of propertiesControl[i]['options']">
+              {{ option }}
+            </option>
+          </select>
+        </div>
+        <div class="col-1">
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteProperty(i)"
+          >
+            X
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

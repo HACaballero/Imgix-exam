@@ -1,0 +1,113 @@
+[
+  {
+    "title": "Width",
+    "placeholder": "An integer or a percent(0-1)",
+    "value": "w",
+    "type": "input"
+  },
+  {
+    "title": "Height",
+    "placeholder": "An integer or a percent(0-1)",
+    "value": "h",
+    "type": "input"
+  },
+  {
+    "title": "Flip Axis",
+    "placeholder": "Valores: h, v and hv",
+    "value": "flip",
+    "options": ["h", "v", "vh"],
+    "type": "select"
+  },
+  {
+    "title": "Orientation",
+    "placeholder": "Valores: 0, 1, 2, 3, 4, 5, 6, 7, 8, 90, 180, or 270",
+    "value": "orient",
+    "options": [0, 1, 2, 3, 4, 5, 6, 7, 8, 90, 180, 270],
+    "type": "select"
+  },
+  {
+    "title": "Rotation",
+    "placeholder": "Valores: del 0 a 360",
+    "value": "rot",
+    "type": "input"
+  },
+  {
+    "title": "Brightness",
+    "placeholder": "Valores: del -100 a 100",
+    "value": "bri",
+    "type": "input"
+  },
+  {
+    "title": "Contrast",
+    "placeholder": "Valores: del -100 a 100",
+    "value": "con",
+    "type": "input"
+  },
+  {
+    "title": "Exposure",
+    "placeholder": "Valores: del -100 a 100",
+    "value": "exp",
+    "type": "input"
+  },
+  {
+    "title": "Gamma",
+    "placeholder": "Valores: del -100 a 100",
+    "value": "gam",
+    "type": "input"
+  },
+  {
+    "title": "Highlight",
+    "placeholder": "Valores: del -100 a 0",
+    "value": "high",
+    "type": "input"
+  },
+  {
+    "title": "Hue Shift",
+    "placeholder": "Valores: del 0 a 360",
+    "value": "hue",
+    "type": "input"
+  },
+  {
+    "title": "Invert",
+    "placeholder": "Valores: true or false",
+    "value": "invert",
+    "options": ["true", "false"],
+    "type": "select"
+  },
+  {
+    "title": "Saturation",
+    "placeholder": "Valores: del -100 a 100",
+    "value": "sat",
+    "type": "input"
+  },
+  {
+    "title": "Shadow",
+    "placeholder": "Valores: del 0 a 100",
+    "value": "shad",
+    "type": "input"
+  },
+  {
+    "title": "Sharpen",
+    "placeholder": "Valores: del 0 a 100",
+    "value": "sharp",
+    "type": "input"
+  },
+  {
+    "title": "Unsharp Mask",
+    "placeholder": "Valores: del -100 a 100",
+    "value": "usm",
+    "type": "input"
+  },
+  {
+    "title": "Unsharp Mask Radius",
+    "placeholder": "Valores: del 0 a 500",
+    "value": "usmrad",
+    "type": "input"
+  },
+  {
+    "title": "Vibrance",
+    "placeholder": "Valores: del -100 a 100",
+    "value": "vib",
+    "type": "input"
+  }
+]
